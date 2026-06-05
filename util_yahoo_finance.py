@@ -29,3 +29,22 @@ def get_returns_and_covariance(tickers: list[str], start: str, end: str = None):
     cov = returns.cov().values * 252   # annualize
 
     return returns, cov
+
+
+def get_latest_prices(tickers: list[str]) -> dict[str, float]:
+    prices = yf.download(tickers, period="5d", auto_adjust=True, progress=False)["Close"]
+    latest = prices.squeeze().ffill().iloc[-1]
+    if hasattr(latest, "items"):
+        return {t: float(latest[t]) for t in tickers}
+    return {tickers[0]: float(latest)}
+
+
+def get_market_caps(tickers: list[str]) -> dict[str, float]:
+    caps = {}
+    for t in tickers:
+        info = yf.Ticker(t).info
+        mc = info.get("marketCap")
+        if mc is None:
+            raise ValueError(f"market cap unavailable for {t}")
+        caps[t] = mc
+    return caps
