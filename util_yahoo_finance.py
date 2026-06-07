@@ -2,7 +2,7 @@ import numpy as np
 import yfinance as yf
 
 
-def get_returns_and_covariance(tickers: list[str], start: str, end: str = None):
+def get_returns(tickers: list[str], start: str, end: str = None):
     """
     Download adjusted daily returns and compute the annualized covariance matrix.
 
@@ -26,9 +26,7 @@ def get_returns_and_covariance(tickers: list[str], start: str, end: str = None):
     # Log returns: more additive across time than simple returns
     returns = np.log(prices / prices.shift(1)).dropna()
 
-    cov = returns.cov().values * 252   # annualize
-
-    return returns, cov
+    return returns
 
 
 def get_latest_prices(tickers: list[str]) -> dict[str, float]:
