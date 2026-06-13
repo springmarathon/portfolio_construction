@@ -1,6 +1,6 @@
 # Portfolio Construction
 
-A rigorous, ground-up curriculum in quantitative portfolio construction. Each notebook derives the theory from first principles, then implements it in Python — with the practitioner's perspective on where the math breaks down and what to do about it.
+A rigorous, ground-up demos in quantitative portfolio construction. Each notebook derives the theory from first principles, then implements it in Python — with the practitioner's perspective on where the math breaks down and what to do about it.
 
 ---
 
@@ -34,7 +34,8 @@ What to do when classical Markowitz fails or is too restrictive.
 | Notebook | Topic |
 |---|---|
 | `2.1_robust_optimization.ipynb` | Ellipsoidal uncertainty sets; the min-max formulation; SOCP reformulation |
-| `2.2_particle_swarm.ipynb` | Metaheuristic methods for non-convex problems (cardinality constraints, integer lot sizes, non-smooth objectives) |
+| `2.2_michaud_resampling.ipynb` | Monte Carlo resampling as an empirical alternative to robust optimization |
+| `2.3_particle_swarm.ipynb` | Metaheuristic methods for non-convex problems (cardinality constraints, integer lot sizes, non-smooth objectives) |
 
 ---
 
@@ -51,6 +52,19 @@ The covariance matrix Σ is just as dangerous as μ when estimated from finite d
 **Key insight:** The aspect ratio q = N/T controls how badly the sample covariance fails. When q → 1, most eigenvalues are statistically indistinguishable from noise. Ledoit-Wolf shrinkage and RMT denoising are the main remedies.
 
 ---
+
+### Module 5 — Factor Models
+
+Decomposing risk and return into systematic and idiosyncratic components.
+
+| Notebook | Topic |
+|---|---|
+| `5.1_statistical_model.ipynb` | Statistical Factor Models; Principal Component Analysis (PCA); Eigen-decomposition of the covariance matrix; Risk decomposition |
+
+**Key insight:** PCA reduces the $O(N^2)$ problem of estimating a covariance matrix to $O(N \times K)$ by identifying the $K$ orthogonal vectors that explain the most variance. This provides a "parsimonious" representation of risk.
+
+---
+
 
 ### Standalone
 
