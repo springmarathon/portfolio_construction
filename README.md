@@ -66,11 +66,11 @@ Decomposing risk and return into systematic and idiosyncratic components.
 ---
 
 
-### Standalone
+### Module 6 - Risk Budgeting
 
 | Notebook | Topic |
 |---|---|
-| `09_risk_parity.ipynb` | Euler decomposition of portfolio risk; log-barrier convex formulation; equal risk contribution |
+| `6.1_risk_parity.ipynb` | Euler decomposition of portfolio risk; log-barrier convex formulation; equal risk contribution |
 
 ---
 
