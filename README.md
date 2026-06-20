@@ -37,6 +37,8 @@ What to do when classical Markowitz fails or is too restrictive.
 | `2.2_michaud_resampling.ipynb` | Monte Carlo resampling as an empirical alternative to robust optimization |
 | `2.3_particle_swarm.ipynb` | Metaheuristic methods for non-convex problems (cardinality constraints, integer lot sizes, non-smooth objectives) |
 
+**Key insight:** Robust optimization and resampling attack the same disease — estimation error in μ — from different angles (analytical vs empirical).
+
 ---
 
 ### Module 3 — Estimation Error
@@ -50,6 +52,16 @@ The covariance matrix Σ is just as dangerous as μ when estimated from finite d
 | `3.3_marchenko_pastur.ipynb` | Random Matrix Theory; the Marchenko-Pastur distribution as a null model; separating signal eigenvalues from noise |
 
 **Key insight:** The aspect ratio q = N/T controls how badly the sample covariance fails. When q → 1, most eigenvalues are statistically indistinguishable from noise. Ledoit-Wolf shrinkage and RMT denoising are the main remedies.
+
+---
+
+### Module 4 — Financial Econometrics
+
+The theoretical underpinnings that connect portfolio construction to asset pricing.
+
+| Notebook | Topic |
+|---|---|
+| `4.1_capm.ipynb` | From two-fund separation to CAPM (homogeneous expectations + market clearing) |
 
 ---
 
