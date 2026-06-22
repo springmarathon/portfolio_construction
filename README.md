@@ -62,6 +62,7 @@ The theoretical underpinnings that connect portfolio construction to asset prici
 | Notebook | Topic |
 |---|---|
 | `4.1_capm.ipynb` | From two-fund separation to CAPM (homogeneous expectations + market clearing) |
+| `4.2_apt.ipynb` | CAPM → APT (relaxing homogeneous expectations via factor structure) |
 
 ---
 
