@@ -20,8 +20,8 @@ The classical mean-variance framework, derived from scratch.
 |---|---|
 | `1.1_efficient_frontier.ipynb` | Lagrangian derivation of the closed-form minimum-variance weights; plotting the efficient frontier; the two-fund theorem |
 | `1.2_tangency_portfolio.ipynb` | Adding the risk-free asset; Sharpe-ratio maximization; the Capital Market Line |
-| `1.3_mean_variance.ipynb` | Long-only constraints; loss of closed form; CVXPY implementations |
-| `1.4_conic_programming.ipynb` | The SOCP/SDP hierarchy; why convexity matters for solvers |
+| `1.3_mean_variance.ipynb` | Convex sets and convex optimization; Long-only constraints; loss of closed form; CVXPY implementations |
+| `1.4_conic_programming.ipynb` | Second order cone; The SOCP/SDP hierarchy; why convexity matters for solvers |
 
 **Key insight:** `w* ∝ Σ⁻¹μ` — the optimizer inverts the covariance matrix to find weights. Small errors in μ and Σ get amplified catastrophically. Everything in modules 2–3 is a response to this.
 
